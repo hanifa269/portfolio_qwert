@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <span class="hamburger-btn material-symbols-rounded">MENU</span>
+            <a href="#" class="logo">
+                <img src="logo.jpg" alt="logo">
+                <h2>Hanifa</h2>
+            </a>
+            <div class="links">
+                <span class="close-btn material-symbols-rounded">close</span>
+                <ul class="links">
+                    <li><a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a></li>
+                    <li><a href="#"><i class="fa fa-fw fa-search"></i> Portfolio</a></li>
+                    <li><a href="#"><i class="fa fa-fw fa-envelope"></i>Skills</a></li>
+                    <li><a href="#"><i class="fa fa-fw fa-user"></i>About us</a></li>
+                    <li><a href="#"><i class="fa fa-fw fa-user"></i>Team</a></li>
+                    <li><a href="#"><i class="fa fa-fw fa-user"></i>Contact us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburgerBtn = document.querySelector('.hamburger-btn');
+            const closeBtn = document.querySelector('.close-btn');
+            const links = document.querySelector('.links');
+
+            hamburgerBtn.addEventListener('click', function () {
+                links.classList.add('show');
+            });
+
+            closeBtn.addEventListener('click', function () {
+                links.classList.remove('show');
+            });
+        });
+    </script>
+</body>
+</html>
